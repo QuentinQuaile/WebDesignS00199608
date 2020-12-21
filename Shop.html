@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Purchase Anime and enjoy to your hearts content">
+    <meta name="keywords" content="Anime, Shop">
+    <meta name="author" content="Quentin Quaile">
+    <title>Shop</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js" ></script>
+    <link href="css/style.css" rel="stylesheet"></link>
+    <link href="css/Login.css" rel="stylesheet"></link>
+    
+</head>
+
+<body id="body">
+
+  <main class="container">
+    <nav>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="Index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Shop.html">Shop </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+              </li>
+            </ul>
+
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary"  id="loginlogout" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Login</button>
+              </button>
+          </div>
+  
+                      <div id="id01" class="modal">
+                      
+                        <div class="alert alert-danger d-none" role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>
+                      <form name="login" class="modal-content animate" action="" method="GET">
+  
+                          <div class="container">
+                          <label for="getEmail"><b>Email address</b></label>
+                          <input type="email" class="form-control" id="getEmail"name="email" value="JimmyTimmy@gmail.com" required>
+  
+                          <label for="getPassword01"><b>Password</b></label>
+                          <input type="password" class="form-control" id="getPassword1" name="password" value="Pass101" required>
+                          
+                          <button type="submit" class="btn btn-primary" value="Login">Log In</button>
+                          </div>
+                          
+
+                          <div class="container" style="background-color:#f1f1f1">
+                          
+                          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                          <span class="psw">Forgot <a href="#">password?</a></span>
+                          </div>
+                      </form>
+                      </div>
+              
+                      <div class="btn-toolbar">
+                        <button type="button" class="btn btn-secondary ml-2" onclick="document.getElementById('Cart').style.display='block'" style="width:auto;">
+                          Checkout <span class="badge badge-light" id="checkout"></span>
+                        </button>
+                    </div>  
+                <div class="row" id="Cart">    
+                  <div class="col-sm col-md-4"> 
+                    <form name="paymentdetails" id="pdetails" action="" method="get">
+                          <fieldset>
+                              <legend>Delivery Details</legend>
+                              <div class="form-group">
+                                  <label for="getFirstName">First name</label>
+                                  <input type="text" class="form-control" id="getFirstName" name="firstname" value="firstname" required>
+                              </div>
+                              <div class="form-group">
+                                  <label for="getLastName">Last name</label> 
+                                  <input type="text" class="form-control" id="getLastName" name="lastname" value="surname" required>
+                              </div>    
+                              <div class="form-group">
+                                  <label for="getAddress1">Addresss</label> 
+                                  <input type="text" class="form-control" id="getAddress1" name="address2" value="address 1" required>
+                              </div> 
+                              <div class="form-group">
+                                  <label for="getAddress2">Addresss</label> 
+                                  <input type="text" class="form-control" id="getAddress2" name="address2"  value="address 2"  required>
+                              </div> 
+                                  <div class="form-group">
+                                  <label for="getAddress3">Addresss</label> 
+                                  <input type="text" class="form-control" id="getAddress3" name="address3"  value="address 3"  required>
+                              </div> 
+                          </fieldset>    
+                          <fieldset>
+                              <legend>Payment Details</legend>
+                              <div class="form-group">
+                                  <label for="getCardName">Card Name</label> 
+                                  <input type="text" class="form-control" id="getCardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
+                              </div>   
+                              <div class="form-group">
+                                  <label for="getCardNumber">Card Number</label> 
+                                  <input type="text" class="form-control" id="getCardNumber" name="cardnumber" value="1234 5678 9102 3456" required>
+                              </div>
+                              <div class="form-group">
+                                  <label for="getCardCVC">CVC</label> 
+                                  <input type="password" class="form-control" id="getCardNumber" name="cardnumber"  required>
+                              </div>
+                          </fieldset>    
+                          <div class="alert alert-success d-none" id="payment-success" role="alert">
+                              Thank you for your purchase. You will receive delivery details via email. Please return to our Shopping Page.
+                          </div>
+                          <div class="alert alert-danger d-none" id="payment-failure" role="alert">
+                            There seems to be a problem with the card details you entered.
+                          </div>                
+                          
+                          <input type='submit' class="btn btn-primary" id="buy-button" value="Buy Now">
+                          <button type="button" onclick="document.getElementById('Cart').style.display='none'" class="cancelbtn">Cancel</button>
+                      </form>
+          
+          
+                  </div> 
+              </div>   
+          </div>
+        </nav>
+  </nav>
+  
+  
+  
+    <div class="test">
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/Haikyuu1.png" alt="Haikyuu" style="height: 300px;">
+        <div class="card-body">
+          <h5 class="card-title">Haikyuu</h5>
+          <p class="card-text">Junior high school student, Shōyō Hinata, becomes obsessed with volleyball after catching a glimpse of Karasuno High School playing in Nationals on TV. Of short stature himself, Hinata is inspired by a player the commentators nickname 'The Little Giant', Karasuno's short but talented wing spiker. Though inexperienced, Hinata is athletic and has an impressive vertical jump; he joins his school's volleyball club – only to find he is its sole member, forcing him to spend the next two years trying to convince other students to help him practice.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/ReZero.png" alt="ReZero">
+        <div class="card-body">
+          <h5 class="card-title">Re:Zero − Starting Life in Another World</h5>
+          <p class="card-text">Subaru Natsuki is a NEET who does nothing but play games. One night, after visiting a convenience store, he is suddenly summoned to another world. With no sign of who summoned him, he soon befriends a silver-haired half-elf girl who introduces herself as Satella, and her companion Puck. Satella mentions that her insignia was stolen by a thief, later revealed to be named Felt. When he and "Satella" are mysteriously killed, Subaru awakens and discovers that he has acquired an ability which he names "Return by Death," enabling him to reverse time by dying.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/parasyte.jpg" alt="Parasyte" style="height: 330px;">
+        <div class="card-body">
+          <h5 class="card-title">Parasyte The Maxim</h5>
+          <p class="card-text">Parasyte centers on a male 17-year-old high school student named Shinichi Izumi, who lives with his mother and father in a quiet neighborhood in Tokyo, Japan. One night, tiny worm-like aliens with drill-like heads called Parasites arrive on Earth, taking over the brains of their hosts by entering through their ears or noses. One Parasite attempts to crawl into Shinichi's nose while he sleeps, but fails as Shinichi wakes up, and enters his body by burrowing into his arm instead. </p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/ToraDora.jpg" alt="Tora Dora!">
+        <div class="card-body">
+          <h5 class="card-title">Tora Dora!</h5>
+          <p class="card-text">Ryuji Takasu is frustrated at trying to look his best as he enters his second year of high school. Despite his gentle personality, his eyes give him the appearance of an intimidating delinquent. He is happy to be classmates with his best friend Yusaku Kitamura, as well as the girl he has a crush on, Minori Kushieda. However, he unexpectedly runs into "the school's most dangerous animal of the highest risk level"—Taiga Aisaka—who just happens to be Minori's best friend.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/HappySugarLife.jpg" alt="Happy Sugar Life">
+        <div class="card-body">
+          <h5 class="card-title">Happy Sugar Life</h5>
+          <p class="card-text">he series is centered on high school girl Satō Matsuzaka who befriends a mysterious little girl named Shio, and immediately falls in love with her. After finding Shio who was abandoned by her mother, they both agree to live together in Satō's apartment. She vows to protect that feeling of love, even if it means committing crimes or even killing people.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/Clannad.jpg" alt="Clannad">
+        <div class="card-body">
+          <h5 class="card-title">Clannad</h5>
+          <p class="card-text">Clannad's story revolves around Tomoya Okazaki, a third year high school student who dislikes his life. Tomoya's mother (Atsuko) died when Tomoya was young, leaving his father (Naoyuki) to raise him. After the accident, Tomoya's father turned to alcohol and gambling, and had frequent fights with his son.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/DeathNote.jpg" alt="Death Note">
+        <div class="card-body">
+          <h5 class="card-title">Death Note</h5>
+          <p class="card-text">In Tokyo, an intelligent yet disaffected high-school student named Light Yagami finds the "Death Note", a mysterious black notebook which can kill anyone as long as the user knows both the target's name and face. After verifying that the notebook works and initially being terrified of its god-like abilities, Light begins to consider the possibilities of the Death Note's abilities and sets out to create a utopian world without crime, killing numerous high-profile Japanese criminals, before eventually targeting international criminals and felons around the world. </p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/madokaMagica.jpg" alt="Madoka Magica" style="height: 370px;">
+        <div class="card-body">
+          <h5 class="card-title">Madoka Magica</h5>
+          <p class="card-text">In the fictional city of Mitakihara, Japan, a middle school student named Madoka Kaname and her friend Sayaka Miki encounter a small, cat-like creature named Kyubey. It offers a contract in which a girl may have any wish granted in exchange for obtaining magical powers and being tasked with fighting witches. Meanwhile, a transfer student and magical girl named Homura Akemi tries to stop Madoka from making the contract with Kyubey.</p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/DataALive.jpg" alt="Date A Live">
+        <div class="card-body">
+          <h5 class="card-title">Date A Live</h5>
+          <p class="card-text">The series begins with a strange phenomenon called a "spatial quake" devastating the center of Eurasia, resulting in at least 150 million casualties. For the next 30 years, smaller spatial quakes plague the world on an irregular basis. In the present, Shido Itsuka, a seemingly ordinary high school student comes across a mysterious girl at the ground zero of a spatial quake. </p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem; height: 830px;">
+        <img class="card-img-top" src="Images/WataMote.jpg" alt="WataMote">
+        <div class="card-body">
+          <h5 class="card-title">WataMote</h5>
+          <p class="card-text">15-year-old Tomoko Kuroki believes that she would become popular upon entering high school because she has become well-versed in the world of otome games. In reality, she finds that she has become an unsociable loner, though she still forces herself to try out what she has learned about achieving popularity. </p>
+          <div class="LeftButton">
+            <a href="#" class="btn btn-primary addtocart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/jquery-min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/Java.js"></script>
+</body>
+</html>

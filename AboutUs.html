@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Purchase Anime and enjoy to your hearts content">
+    <meta name="keywords" content="Anime, Shop">
+    <meta name="author" content="Quentin Quaile">
+    <title>About Us</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js" ></script>
+    <link href="css/style.css" rel="stylesheet"></link>
+    <link href="css/Login.css" rel="stylesheet"></link>
+</head>
+
+<nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.html">Contact</a>
+            </li>
+          </ul>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary"  id="loginlogout" onclick="document.getElementById('id01').style.display='block'" style="width:auto;" >Login</button>
+            </button>
+        </div>
+
+                    <div id="id01" class="modal">
+                    
+                      <div class="alert alert-danger d-none" role="alert" id="loginerror">The username or password you entered is incorrect. <a href="">Forgot your password?</a></div>
+                    <form name="login" class="modal-content animate" action="" method="GET">
+
+                        <div class="container">
+                        <label for="getEmail"><b>Email address</b></label>
+                        <input type="email" class="form-control" id="getEmail"name="email" value="JimmyTimmy@gmail.com" required>
+
+                        <label for="getPassword01"><b>Password</b></label>
+                        <input type="password" class="form-control" id="getPassword1" name="password" value="Pass101" required>
+                        
+                        <button type="submit" class="btn btn-primary" value="Login">Log In</button>
+                        </div>
+                        
+
+                        <div class="container" style="background-color:#f1f1f1">
+                        
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                    </div>
+            
+                    <div class="btn-toolbar">
+                      <button type="button" class="btn btn-secondary ml-2" onclick="document.getElementById('Cart').style.display='block'" style="width:auto;">
+                        Checkout <span class="badge badge-light" id="checkout"></span>
+                      </button>
+                  </div>  
+              <div class="row" id="Cart">    
+                <div class="col-sm col-md-4"> 
+                  <form name="paymentdetails" id="pdetails" action="" method="get">
+                        <fieldset>
+                            <legend>Delivery Details</legend>
+                            <div class="form-group">
+                                <label for="getFirstName">First name</label>
+                                <input type="text" class="form-control" id="getFirstName" name="firstname" value="firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="getLastName">Last name</label> 
+                                <input type="text" class="form-control" id="getLastName" name="lastname" value="surname" required>
+                            </div>    
+                            <div class="form-group">
+                                <label for="getAddress1">Addresss</label> 
+                                <input type="text" class="form-control" id="getAddress1" name="address2" value="address 1" required>
+                            </div> 
+                            <div class="form-group">
+                                <label for="getAddress2">Addresss</label> 
+                                <input type="text" class="form-control" id="getAddress2" name="address2"  value="address 2"  required>
+                            </div> 
+                                <div class="form-group">
+                                <label for="getAddress3">Addresss</label> 
+                                <input type="text" class="form-control" id="getAddress3" name="address3"  value="address 3"  required>
+                            </div> 
+                        </fieldset>    
+                        <fieldset>
+                            <legend>Payment Details</legend>
+                            <div class="form-group">
+                                <label for="getCardName">Card Name</label> 
+                                <input type="text" class="form-control" id="getCardName" name="cardname" value="MR FIRSTNAME SURNAME" required>
+                            </div>   
+                            <div class="form-group">
+                                <label for="getCardNumber">Card Number</label> 
+                                <input type="text" class="form-control" id="getCardNumber" name="cardnumber" value="1234 5678 9102 3456" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="getCardCVC">CVC</label> 
+                                <input type="password" class="form-control" id="getCardNumber" name="cardnumber"  required>
+                            </div>
+                        </fieldset>    
+                        <div class="alert alert-success d-none" id="payment-success" role="alert">
+                            Thank you for your purchase. You will receive delivery details via email. Please return to our Shopping Page.
+                        </div>
+                        <div class="alert alert-danger d-none" id="payment-failure" role="alert">
+                          There seems to be a problem with the card details you entered.
+                        </div>                
+                        
+                        <input type='submit' class="btn btn-primary" id="buy-button" value="Buy Now">
+                        <button type="button" onclick="document.getElementById('Cart').style.display='none'" class="cancelbtn">Cancel</button>
+                    </form>
+        
+        
+                </div> 
+            </div>   
+        </div>
+      </nav>
+</nav>
+
+<body>
+    <div class="about">
+        <h1>
+            When was anime created
+        </h1>
+        <p>
+          The history of anime can be traced back to the start of the 20th century, with the earliest verifiable films dating from 1917. The first generation of animators in the late 1910s included Ōten Shimokawa, Jun'ichi Kōuchi and Seitaro Kitayama, commonly referred to as the "fathers" of anime.
+        </p>
+        <h1>Technique of Anime</h1>
+        <img src="Images/styles.jpg" alt="Styles">
+        <p>Modern anime follows a typical animation production process, involving storyboarding, voice acting, character design, and cel production. Since the 1990s, animators have increasingly used computer animation to improve the efficiency of the production process. Early anime works were experimental, and consisted of images drawn on blackboards, stop motion animation of paper cutouts, and silhouette animation. Cel animation grew in popularity until it came to dominate the medium. In the 21st century, the use of other animation techniques is mostly limited to independent short films, including the stop motion puppet animation work produced by Tadahito Mochinaga, Kihachirō Kawamoto and Tomoyasu Murata. Computers were integrated into the animation process in the 1990s, with works such as Ghost in the Shell and Princess Mononoke mixing cel animation with computer-generated images. Fuji Film, a major cel production company, announced it would stop cel production, producing an industry panic to procure cel imports and hastening the switch to digital processes.</p>
+    </div>
+    <script src="js/jquery-min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/Java.js"></script>
+</body>
+
+</html>
